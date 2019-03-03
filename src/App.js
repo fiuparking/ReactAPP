@@ -18,7 +18,7 @@ class App extends Component {
       {/* passing in components */}
         <Header />
         {/* passing in props to bob */}
-        <Home name={"Bob"} age={50} user={user}>
+        <Home name={"Bob"} Personage={50} user={user}>
           <p> I am a child tag</p>
         </Home>
         <header className="App-header">
