@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 
 class Header extends Component {
+  constructor(props){
+    super();
+  }
   render() {
     return (
         <nav className="navbar navbar-default">
@@ -12,7 +15,10 @@ class Header extends Component {
                 </ul>
               </div>
            </div>
+           <hr />
+        <button onClick={this.props.call} className="btn btn-primary">Call Father Component</button>
         </nav>
+       
     );
   }
 }

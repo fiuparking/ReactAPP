@@ -8,6 +8,11 @@ class Home extends Component {
       Age: props.Personage,
       status: 0
     };
+    setTimeout( () => {
+      this.setState({
+        status: this.state.status + 100
+      })
+    }, 3000)
   }
   increaseAge() {
     this.setState(
@@ -27,6 +32,7 @@ class Home extends Component {
             {"Apperently I can run some javascript here and put it before the return method :D"}
             <p>My name is {this.props.name}</p>
             <p>My age is {this.state.Age}</p>
+            <p>Status : {this.state.status}</p>
             <button className="addAge" onClick={() => this.increaseAge()}></button>
             <p>{test}</p>
             <hr/>

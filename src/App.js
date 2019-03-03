@@ -8,6 +8,11 @@ import Header from './components/Header';
 
 
 class App extends Component {
+  callFromChildComponent()
+  {
+    console.log("I was called from a child component");
+  }
+
   render() {
     let user = {
       name: "Steve",
@@ -16,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
       {/* passing in components */}
-        <Header />
+        <Header call={this.callFromChildComponent} />
         {/* passing in props to bob */}
         <Home name={"Bob"} Personage={50} user={user}>
           <p> I am a child tag</p>
