@@ -8,9 +8,25 @@ import Header from './components/Header';
 
 
 class App extends Component {
+
+  constructor()
+  {
+    super();
+    this.state = {
+      linkName: "Home"
+    }
+  }
+
+
   callFromChildComponent()
   {
     console.log("I was called from a child component");
+  }
+
+  changeLinkName(link){
+    this.setState({
+      linkName: link
+    })
   }
 
   render() {
@@ -21,9 +37,18 @@ class App extends Component {
     return (
       <div className="App">
       {/* passing in components */}
-        <Header call={this.callFromChildComponent} />
+        <Header 
+        homeLink = {this.state.linkName}
+        call={this.callFromChildComponent} 
+
+         />
         {/* passing in props to bob */}
-        <Home name={"Bob"} Personage={50} user={user}>
+        <Home 
+        name={"Bob"} 
+        Personage={50} 
+        user={user}
+        changelink = {() => this.changeLinkName("NewHome")}
+        >
           <p> I am a child tag</p>
         </Home>
         <header className="App-header">

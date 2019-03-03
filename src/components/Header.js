@@ -11,7 +11,7 @@ class Header extends Component {
            <div className="container">
               <div className="navbar-header">
                 <ul className="nav navbar-header">
-                  <li><a href="#">Home</a></li>
+                  <li><a href="#">{this.props.homeLink}</a></li>
                 </ul>
               </div>
            </div>
