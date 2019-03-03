@@ -12,7 +12,7 @@ class Home extends Component {
   increaseAge() {
     this.setState(
       {
-      Age: this.state.Age++
+      Age: ++this.state.Age
     });
     console.log(this.state.Age);
   }
