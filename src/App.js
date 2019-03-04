@@ -77,7 +77,7 @@ class App extends Component
 
 
         {/* Fix this TODO */}
-        <button onClick={() => this.onChangeHomeMount} className="btn btn-primary">(Un)Mount home component</button>
+        <button onClick={() => this.onChangeHomeMount()} className="btn btn-primary">(Un)Mount home component</button>
 
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -93,6 +93,7 @@ class App extends Component
             Learn React
           </a>
         </header>
+
       </div>
     );
   }
