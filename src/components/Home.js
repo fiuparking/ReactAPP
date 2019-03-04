@@ -24,7 +24,7 @@ class Home extends Component {
   }
 
   onChangeLink(){
-    this.props.changelink(this.state.homeLink);
+    this.props.changelink();
   }
 
   render() {
@@ -43,7 +43,7 @@ class Home extends Component {
             <hr/>
             {this.props.children}
             {/* TODO get this to change */}
-            <button onClick={() => this.onChangeLink} className="btn btn-primary">Change Header link here</button>
+            <button onClick={() => this.onChangeLink()} className="btn btn-primary">Change Header link here</button>
         </div>
     );
   }
