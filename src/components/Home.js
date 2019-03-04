@@ -13,8 +13,49 @@ class Home extends Component {
       this.setState({
         status: this.state.status + 100
       })
-    }, 3000)
+    }, 3000);
+    console.log("constructor");
   }
+
+  componentWillMount()
+  {
+    console.log("Component will mount");
+  }
+
+  componentDidMount()
+  {
+    console.log("Component did mount!");
+  }
+
+  componentWillReceiveProps(nextProps)
+  {
+    console.log("Component will receive new props", nextProps);
+  }
+
+  shouldComponentUpdate(nextProps, newState)
+  {
+    console.log("Should component update?", nextProps, newState);
+    // if(newState.status === 1 ){
+    //   return false;
+    // }
+    return true;
+  }
+
+  componentWillUpdate(nextProps, newState)
+  {
+    console.log("Component will update", nextProps, newState);
+  }
+
+
+  componentDidUpdate(prevProps, prevState){
+    console.log("Component did update", prevProps, prevState);
+    
+  }
+
+  componentWillUnmount(){
+    console.log("Component will unmount");
+  }
+
   increaseAge() {
     this.setState(
       {
@@ -32,6 +73,8 @@ class Home extends Component {
       homeLink: event.target.value
     })
   }
+
+
 
   render() {
     var test = "variables work before return";
@@ -56,6 +99,8 @@ class Home extends Component {
             ></input>
             <hr/>
             <button onClick={() => this.onChangeLink()} className="btn btn-primary">Change Header link here</button>
+            <hr/>
+            
         </div>
     );
   }

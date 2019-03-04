@@ -7,13 +7,15 @@ import Header from './components/Header';
 
 
 
-class App extends Component {
+class App extends Component 
+{
 
   constructor()
   {
     super();
     this.state = {
-      linkName: "Home"
+      linkName: "Home",
+      homeMounted: true
     }
   }
 
@@ -29,11 +31,39 @@ class App extends Component {
     })
   }
 
-  render() {
+  onChangeHomeMount(){
+    this.setState({
+      homeMounted: !this.state.homeMounted
+    })
+  }
+
+  
+
+  render() 
+  {
     let user = {
       name: "Steve",
       food: "bits"
+    };
+
+    let homeComponent = "";
+
+    if(this.state.homeMounted)
+    {
+      homeComponent = (
+        // {/* passing in props to bob */}
+        <Home 
+            name={"Bob"} 
+            Personage={50} 
+            user={user}
+            changelink = {(value) => this.changeLinkName(value)}
+            initialLinkText = {this.state.linkName}
+        >
+            <p> I am a child tag</p>
+        </Home>
+      );
     }
+
     return (
       <div className="App">
       {/* passing in components */}
@@ -42,16 +72,13 @@ class App extends Component {
         call={this.callFromChildComponent} 
 
          />
-        {/* passing in props to bob */}
-        <Home 
-        name={"Bob"} 
-        Personage={50} 
-        user={user}
-        changelink = {(value) => this.changeLinkName(value)}
-        initialLinkText = {this.state.linkName}
-        >
-          <p> I am a child tag</p>
-        </Home>
+
+        {homeComponent}
+
+
+        {/* Fix this TODO */}
+        <button onClick={() => this.onChangeHomeMount} className="btn btn-primary">(Un)Mount home component</button>
+
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
