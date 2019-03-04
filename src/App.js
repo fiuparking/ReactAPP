@@ -47,7 +47,8 @@ class App extends Component {
         name={"Bob"} 
         Personage={50} 
         user={user}
-        changelink = {() => this.changeLinkName("NewHome")}
+        changelink = {(value) => this.changeLinkName(value)}
+        initialLinkText = {this.state.linkName}
         >
           <p> I am a child tag</p>
         </Home>
