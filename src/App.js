@@ -1,26 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
 import './App.css';
+import GarageInfo from './components/GarageInfo';
+class App extends Component 
+{
 
-class App extends Component {
-  render() {
+
+  }
+  render() 
+  {
+
+    //Todo Template, Finish this later
+    const parkingGarageOuput = this.state.INPUTHERE.map((Garage) =>{
+      return
+      <GarageInfo spotsAvailableForStudents={"input"} 
+      spotsAvailableForEmployees={"input"}
+      percentFullStudents={"input"}
+      percentFullEmployees={"input"}
+      />
+    })
+      //Todo test api later
+    let FIU_API_LINK = "secret";
+
+
     return (
+      <Fragment>
+      <h1>FIU Parking Info</h1>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
       </div>
+      </Fragment>
+
     );
   }
 }
