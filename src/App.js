@@ -12,6 +12,18 @@ class App extends Component
         },
         {
           TWOobject: "2object"
+        },
+        {
+          TWOobject: "2object"
+        },
+        {
+          TWOobject: "2object"
+        },
+        {
+          TWOobject: "2object"
+        },
+        {
+          TWOobject: "2object"
         }
       ]
     }
@@ -23,7 +35,9 @@ class App extends Component
     const parkingGarageOuput = this.state.INPUTHERE.map( 
       (Garage) =>{
       return(
-        <GarageInfo spotsAvailableForStudents={"input"} 
+        <GarageInfo
+        garageName={"input"} 
+        spotsAvailableForStudents={"input"} 
         spotsAvailableForEmployees={"input"}
         percentFullStudents={"input"}
         percentFullEmployees={"input"}
@@ -38,8 +52,9 @@ class App extends Component
     return (
       <Fragment>
       <h1>FIU Parking Info</h1>
-      <div className="App">
-      </div>
+        <div className="App">
+        {parkingGarageOuput}
+        </div>
       </Fragment>
 
     );
