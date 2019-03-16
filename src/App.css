@@ -4,6 +4,12 @@ h1{
   background-color: #F8C93E;
   padding: 20px;
 }
+h3{
+  text-align: center;
+  color: #081E3F;
+  background-color: #F8C93E;
+  padding: 10px;
+}
 
 .App {
   text-align: center;

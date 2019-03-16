@@ -1,7 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import './GarageInfo.css';
-import {Row,Card, CardBody,
-  CardTitle, Col } from 'reactstrap';
+import {Row,Card, CardBody, CardTitle, Col } from 'reactstrap';
+
+const cardStyle = {
+  border: '2px solid rgba(248, 201, 62, 0.2)'
+}
 
 class App extends Component 
 {
@@ -16,9 +19,9 @@ class App extends Component
         <div className="GarageInfo">
           <Row>
             <Col>
-              <Card>
+              <Card style={cardStyle}>
                 <CardBody>
-                <CardTitle>{this.props.garageName}</CardTitle>
+                <CardTitle><h3>{this.props.garageName}</h3></CardTitle>
                     <ul>
                       <li>Student Spots Open: {this.props.spotsAvailableForStudents}</li>
                       <li>Student Parking Spots Taken: {this.props.percentFullStudents}</li>
