@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './GarageInfo.css';
 import {Row,Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button} from 'reactstrap';
+  CardTitle, CardSubtitle, Button, Col } from 'reactstrap';
 
 class App extends Component 
 {
@@ -13,6 +13,8 @@ class App extends Component
   {
     return (
         <div className="GarageInfo">
+        <Row>
+          <Col>
           <Card>
             <CardBody>
               <CardTitle>{this.props.garageName}</CardTitle>
@@ -26,6 +28,8 @@ class App extends Component
               </CardText>
             </CardBody>
           </Card>
+          </Col>
+        </Row>
         </div>
     );
   }

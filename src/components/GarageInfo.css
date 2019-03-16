@@ -1,6 +1,9 @@
 .GarageInfo{
     display: inline;
     float: left;
+    position: relative;
     text-align: center;
+    padding-left: 55px;
+    padding-top: 55px;
     
 }
