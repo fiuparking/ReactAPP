@@ -7,26 +7,7 @@ class App extends Component
   {
     super(props);
     this.state= {
-      INPUTHERE: [
-        {
-          ONEobject: "1object"
-        },
-        {
-          TWOobject: "2object"
-        },
-        {
-          TWOobject: "2object"
-        },
-        {
-          TWOobject: "2object"
-        },
-        {
-          TWOobject: "2object"
-        },
-        {
-          TWOobject: "2object"
-        }
-      ]
+      INPUTHERE: []
     }
   }
 
