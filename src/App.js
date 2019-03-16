@@ -3,7 +3,8 @@ import './App.css';
 import GarageInfo from './components/GarageInfo';
 class App extends Component 
 {
-  constructor(props){
+  constructor(props)
+  {
     super(props);
     this.state= {
       INPUTHERE: [
@@ -28,6 +29,22 @@ class App extends Component
       ]
     }
   }
+
+  componentDidMount(){
+    //Todo test api later
+    let FIU_API_LINK = "https://m.fiu.edu/feeds//transit/v1/json.php?section=parking";
+    fetch(FIU_API_LINK)
+    .then(results => {
+      return results.json();
+    })
+    .then( data =>{
+      this.setState({
+        INPUTHERE: data
+      });
+      console.log(data);
+    })
+  }
+
   render() 
   {
 
@@ -36,17 +53,16 @@ class App extends Component
       (Garage) =>{
       return(
         <GarageInfo
-        garageName={"input"} 
-        spotsAvailableForStudents={"input"} 
-        spotsAvailableForEmployees={"input"}
-        percentFullStudents={"input"}
-        percentFullEmployees={"input"}
+        key={Garage.GarageName}
+        garageName={Garage.GarageName} 
+        spotsAvailableForStudents={(Garage.StudentMax - Garage.StudentSpaces)} 
+        spotsAvailableForEmployees={Garage.OtherMax - Garage.OtherSpaces}
+        percentFullStudents={Garage.StudentFull}
+        percentFullEmployees={Garage.OtherFull}
         />);
       
 
     })
-      //Todo test api later
-    let FIU_API_LINK = "secret";
 
 
     return (
