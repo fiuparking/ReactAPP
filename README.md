@@ -19,3 +19,4 @@
 [![HitCount](http://hits.dwyl.io/fiuparking/ReactAPP.svg)](http://hits.dwyl.io/fiuparking/ReactAPP)
 [![GitHub contributors](https://img.shields.io/github/contributors/fiuparking/ReactAPP.svg)](https://GitHub.com/fiuparking/ReactAPP/graphs/contributors/)
 ![Dev Dependencies](https://img.shields.io/david/dev/fiuparking/ReactAPP.svg)
+![Issues](https://img.shields.io/github/issues/fiuparking/ReactAPP.svg)
