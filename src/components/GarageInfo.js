@@ -23,9 +23,9 @@ class App extends Component
                 <CardBody>
                 <CardTitle><h3>{this.props.garageName}</h3></CardTitle>
                     <ul>
-                      <li>Student Spots Open: {this.props.spotsAvailableForStudents}</li>
+                      <li>Student Spots Open: {this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}</li>
                       <li>Student Parking Spots Taken: {this.props.percentFullStudents}</li>
-                      <li>Employee Spots Open: {this.props.spotsAvailableForEmployees}</li>
+                      <li>Employee Spots Open: {this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}</li>
                       <li>Employee Parking Spots Taken: {this.props.percentFullEmployees}</li>
                   </ul>
                   </CardBody>

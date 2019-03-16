@@ -36,8 +36,10 @@ class App extends Component
         <GarageInfo
         key={Garage.GarageName}
         garageName={Garage.GarageName} 
-        spotsAvailableForStudents={(Garage.StudentMax - Garage.StudentSpaces)} 
+        spotsAvailableForStudents={(Garage.StudentMax - Garage.StudentSpaces)}
+        totalStudentParking={Garage.StudentMax}
         spotsAvailableForEmployees={Garage.OtherMax - Garage.OtherSpaces}
+        totalEmployeeParking={Garage.OtherMax}
         percentFullStudents={Garage.StudentFull}
         percentFullEmployees={Garage.OtherFull}
         />);
