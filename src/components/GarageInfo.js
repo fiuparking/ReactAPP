@@ -14,14 +14,20 @@ class App extends Component
     return (
         <div className="GarageInfo">
         <Row>
-          <Col>{this.props.garageName}
+          <Col>
+            <Card>
+            <CardBody>
+            <CardTitle>{this.props.garageName}</CardTitle>
+            <CardText>
                 <ul>
                   <li>Student Spots Open: {this.props.spotsAvailableForStudents}</li>
                   <li>Student Parking Spots Taken: {this.props.percentFullStudents}</li>
                   <li>Employee Spots Open: {this.props.spotsAvailableForEmployees}</li>
                   <li>Employee Parking Spots Taken: {this.props.percentFullEmployees}</li>
               </ul>
-              
+              </CardText>
+              </CardBody>
+              </Card>
           </Col>
         </Row>
         </div>
