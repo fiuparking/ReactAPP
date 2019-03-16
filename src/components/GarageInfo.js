@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './GarageInfo.css';
-import {Row,Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, Col } from 'reactstrap';
+import {Row,Card, CardText, CardBody,
+  CardTitle, Col } from 'reactstrap';
 
 class App extends Component 
 {
