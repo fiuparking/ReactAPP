@@ -17,3 +17,4 @@
 ![Dependencies](https://david-dm.org/fiuparking/ReactAPP.svg)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-success.svg)](https://github.com/fiuparking/ReactAPP/graphs/commit-activity)
 [![HitCount](http://hits.dwyl.io/fiuparking/ReactAPP.svg)](http://hits.dwyl.io/fiuparking/ReactAPP)
+[![GitHub contributors](https://img.shields.io/github/contributors/fiuparking/ReactAPP.svg)](https://GitHub.com/fiuparking/ReactAPP/graphs/contributors/)
