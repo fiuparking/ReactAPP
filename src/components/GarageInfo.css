@@ -3,7 +3,11 @@
     float: left;
     position: relative;
     text-align: center;
-    padding-left: 55px;
-    padding-top: 55px;
-    
+    margin-left: 6%;
+    margin-top: 5%;
+
+}
+
+.GarageInfo ul li {
+    text-align: left;
 }

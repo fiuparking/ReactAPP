@@ -1,9 +1,14 @@
 h1{
   text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Bold', Arial, sans-serif;
+  color: #081E3F;
+  background-color: #F8C93E;
+  padding: 20px;
 }
 
 .App {
   text-align: center;
+  color:#081E3F;
 }
 
 .App-logo {
