@@ -9,8 +9,7 @@
 ![Dev Dependencies](https://img.shields.io/david/dev/fiuparking/ReactAPP.svg)
 ![Issues](https://img.shields.io/github/issues/fiuparking/ReactAPP.svg)
 
-Hello & Welcome the goal of this project was to enhance the parking services platform currently delivered by FIU
-For all of the following websites:
+Hello & welcome. The goal of this project is to enhance the parking services platform that is currently delivered by FIU. This includes the following websites:
 
 https://parking.fiu.edu/patcount/
 
