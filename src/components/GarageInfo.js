@@ -22,12 +22,17 @@ class App extends Component
               <Card style={cardStyle}>
                 <CardBody>
                 <CardTitle><h3>{this.props.garageName}</h3></CardTitle>
+                <p><b>Students:</b></p>
                     <ul>
                       <li>Student Spots Open: {this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}</li>
                       <li>Student Parking Spots Taken: {this.props.percentFullStudents}</li>
-                      <li>Employee Spots Open: {this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}</li>
-                      <li>Employee Parking Spots Taken: {this.props.percentFullEmployees}</li>
                   </ul>
+                  <p><b>Employees:</b></p>
+                  <ul>
+                  <li>Employee Spots Open: {this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}</li>
+                  <li>Employee Parking Spots Taken: {this.props.percentFullEmployees}</li>
+                  </ul>
+                 
                   </CardBody>
                 </Card>
             </Col>
