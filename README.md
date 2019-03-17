@@ -13,4 +13,5 @@ Hello & Welcome the goal of this project was to enhance the parking services pla
 For all of the following websites:
 
 https://parking.fiu.edu/patcount/
+
 https://parking.fiu.edu/
