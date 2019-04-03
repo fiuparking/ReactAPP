@@ -21,12 +21,8 @@ class App extends Component
                 <CardBody>
                 <CardTitle><h3>{this.props.garageName}</h3></CardTitle>
                 <p><b>Students:</b></p>
-                    <ul>
-                      <li>Student Spots Open: {this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}</li>
-                      <li>Student Parking Spots Taken: {this.props.percentFullStudents}</li>
-                  </ul>
 
-                  <div className="flex-wrapper">
+                <div className="flex-wrapper">
                     <div className="single-chart">
                       <svg viewBox="0 0 36 36" className="circular-chart red">
                         <path className="circle-bg"
@@ -45,13 +41,14 @@ class App extends Component
                     </div>
                   </div>
 
+                      Student Spots Open: {this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}
+
+
+
 
                   <p><b>Employees:</b></p>
-                  <ul>
-                  <li>Employee Spots Open: {this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}</li>
-                  <li>Employee Parking Spots Taken: {this.props.percentFullEmployees}</li>
-                  </ul>
-                 
+                    
+                    
                   <div className="flex-wrapper">
                     <div className="single-chart">
                       <svg viewBox="0 0 36 36" className="circular-chart red">
@@ -69,7 +66,11 @@ class App extends Component
                         <text x="18" y="20.35" className="percentage">{this.props.percentFullEmployees}</text>
                       </svg>
                     </div>
-                  </div>
+                  </div>                    
+                    
+                    Employee Spots Open: {this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}
+                 
+
 
                   </CardBody>
                 </Card>
