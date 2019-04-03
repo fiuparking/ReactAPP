@@ -17,8 +17,6 @@ class App extends Component
     return (
       <Fragment>
         <div className="GarageInfo">
-          <Row>
-            <Col>
               <Card style={cardStyle}>
                 <CardBody>
                 <CardTitle><h3>{this.props.garageName}</h3></CardTitle>
@@ -27,16 +25,54 @@ class App extends Component
                       <li>Student Spots Open: {this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}</li>
                       <li>Student Parking Spots Taken: {this.props.percentFullStudents}</li>
                   </ul>
+
+                  <div className="flex-wrapper">
+                    <div className="single-chart">
+                      <svg viewBox="0 0 36 36" className="circular-chart red">
+                        <path className="circle-bg"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path className="circle"
+                          strokeDasharray={this.props.percentFullStudents.substring(0,(this.props.percentFullStudents.length - 1)) + ", 100"}
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <text x="18" y="20.35" className="percentage">{this.props.percentFullStudents}</text>
+                      </svg>
+                    </div>
+                  </div>
+
+
                   <p><b>Employees:</b></p>
                   <ul>
                   <li>Employee Spots Open: {this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}</li>
                   <li>Employee Parking Spots Taken: {this.props.percentFullEmployees}</li>
                   </ul>
                  
+                  <div className="flex-wrapper">
+                    <div className="single-chart">
+                      <svg viewBox="0 0 36 36" className="circular-chart red">
+                        <path className="circle-bg"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path className="circle"
+                          strokeDasharray={this.props.percentFullEmployees.substring(0,(this.props.percentFullEmployees.length - 1)) + ", 100"}
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <text x="18" y="20.35" className="percentage">{this.props.percentFullEmployees}</text>
+                      </svg>
+                    </div>
+                  </div>
+
                   </CardBody>
                 </Card>
-            </Col>
-          </Row>
         </div>
       </Fragment>
     );

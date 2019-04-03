@@ -1,11 +1,9 @@
 .GarageInfo{
-    display: inline;
-    float: left;
+    display: inline-block;
     position: relative;
-    text-align: center;
-    margin-left: 4.5%;
-    margin-top: 4%;
-
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .GarageInfo ul li {
