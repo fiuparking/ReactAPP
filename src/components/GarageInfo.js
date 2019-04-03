@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './GarageInfo.css';
-import {Row,Card, CardBody, CardTitle, Col } from 'reactstrap';
+import {Card, CardBody, CardTitle} from 'reactstrap';
 
 const cardStyle = {
   border: '2px solid rgba(248, 201, 62, 0.2)'
@@ -48,7 +48,7 @@ class App extends Component
 
                   <p><b>Employees:</b></p>
                     
-                    
+                    {/* https://codepen.io/sergiopedercini/pen/jmKdbj */}
                   <div className="flex-wrapper">
                     <div className="single-chart">
                       <svg viewBox="0 0 36 36" className="circular-chart red">
