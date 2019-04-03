@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './GarageInfo.css';
+import './test.css';
 import {Card, CardBody, CardTitle} from 'reactstrap';
 
 const cardStyle = {
