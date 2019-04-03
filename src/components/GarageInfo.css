@@ -1,10 +1,8 @@
 .GarageInfo{
     display: inline;
-    float: left;
     position: relative;
     text-align: center;
-    margin-left: 4.5%;
-    margin-top: 4%;
+    margin: 0 auto;
 
 }
 
