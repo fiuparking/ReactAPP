@@ -85,7 +85,7 @@ class App extends Component
                                 </div>
                               </div>
 
-                                  Spots Open: <b>{this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}</b>
+                                Spots Open: <b>{this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}</b>
 
                           </Col>
                         </Row>
@@ -115,7 +115,7 @@ class App extends Component
                               </div>
                             </div>                    
                               
-                              Spots Open: <b>{this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}</b>
+                             Spots Open: <b>{this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}</b>
                           
                           </Col>
                         </Row>
