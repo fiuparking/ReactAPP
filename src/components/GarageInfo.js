@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './GarageInfo.css';
 import './test.css';
-import {TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, CardBody} from 'reactstrap';
+import {TabContent, TabPane, Nav, NavItem, NavLink, Card, CardTitle, Row, Col, CardBody} from 'reactstrap';
 import classnames from 'classnames';
 
 const cardStyle = {
@@ -85,7 +85,7 @@ class App extends Component
                                 </div>
                               </div>
 
-                                  Student Spots Open: {this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}
+                                  Spots Open: <b>{this.props.spotsAvailableForStudents} / {this.props.totalStudentParking}</b>
 
                           </Col>
                         </Row>
@@ -115,7 +115,7 @@ class App extends Component
                               </div>
                             </div>                    
                               
-                              Employee Spots Open: {this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}
+                              Spots Open: <b>{this.props.spotsAvailableForEmployees} / {this.props.totalEmployeeParking}</b>
                           
                           </Col>
                         </Row>
