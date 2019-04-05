@@ -39,9 +39,9 @@ class App extends Component
                 <Card style={cardStyle}>
                     <CardBody>
                     <CardTitle><h3>{this.props.garageName}</h3></CardTitle>
-                    <div>
+                    <div >
 
-                    <Nav tabs>
+                    <Nav tabs >
                       <NavItem>
                         <NavLink
                           className={classnames({ active: this.state.activeTab === '1' })}
@@ -59,14 +59,11 @@ class App extends Component
                         </NavLink>
                       </NavItem>
                     </Nav>
-
-
-
-
-                    <TabContent activeTab={this.state.activeTab}>
-                      <TabPane tabId="1">
+                    
+                    <TabContent activeTab={this.state.activeTab} >
+                      <TabPane tabId="1" >
                         <Row>
-                          <Col sm="12">
+                          <Col sm="12" >
                           {/* <p><b>Students:</b></p> */}
 
                             <div className="flex-wrapper">

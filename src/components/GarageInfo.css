@@ -5,7 +5,10 @@
     margin: 0 auto;
     padding: 10px;
 }
-
+.nav-tabs{
+   color: #F00;
+   border-bottom: #F00;
+}
 .GarageInfo ul li {
     text-align: left;
 }
