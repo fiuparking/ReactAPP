@@ -39,9 +39,9 @@ class App extends Component
                 <Card style={cardStyle}>
                     <CardBody>
                     <CardTitle><h3>{this.props.garageName}</h3></CardTitle>
-                    <div >
+                    <div>
 
-                    <Nav tabs >
+                    <Nav tabs className="nav nav-tabs justify-content-center">
                       <NavItem>
                         <NavLink
                           className={classnames({ active: this.state.activeTab === '1' })}

@@ -6,8 +6,13 @@
     padding: 10px;
 }
 .nav-tabs{
-   color: #F00;
-   border-bottom: #F00;
+   border-bottom: 1px solid rgba(248, 201, 62, 0.2) !important;
+   float: none !important;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    border-color: rgba(248, 201, 62, 0.2) !important;
+    background: rgba(248, 201, 62, 0.2) !important;
 }
 .GarageInfo ul li {
     text-align: left;
