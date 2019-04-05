@@ -12,8 +12,22 @@ class App extends Component
   }
 
   componentDidMount(){
+    
+    this.getInfo();
+    //runs ever 5 minutes
+    this.interval = setInterval(this.getInfo, 300000)
+  }
+
+  componentWillMount()
+  {
+    // Clear the interval right before component unmount
+    clearInterval(this.interval);
+  }
+  
+  getInfo = () => 
+  {
     //Todo test api later
-    let FIU_API_LINK = "https://m.fiu.edu/feeds//transit/v1/json.php?section=parking";
+  let FIU_API_LINK = "https://m.fiu.edu/feeds//transit/v1/json.php?section=parking";
     fetch(FIU_API_LINK)
     .then(results => {
       return results.json();
@@ -24,6 +38,13 @@ class App extends Component
       });
       console.log(data);
     })
+    .catch(
+      function() 
+      {
+        // This is where you run code if the server returns any errors
+        console.log("Could not get the data!")
+      }
+    )
   }
 
   render() 
@@ -31,7 +52,18 @@ class App extends Component
 
     //Todo Template, Finish this later
     const parkingGarageOuput = this.state.INPUTHERE.map( 
-      (Garage) =>{
+      (Garage) =>
+      {
+        //TODO Unsure if works.
+        //DEAL WITH NEGATIVE PARKING
+        if(Garage.StudentSpaces < 0)
+        {
+          Garage.StudentSpaces = 0;
+        }
+        if(Garage.OtherSpaces < 0)
+        {
+          Garage.OtherSpaces = 0;
+        }
       return(
         <GarageInfo
         key={Garage.GarageName}
@@ -43,8 +75,6 @@ class App extends Component
         percentFullStudents={Garage.StudentFull}
         percentFullEmployees={Garage.OtherFull}
         />);
-      
-
     })
 
 
