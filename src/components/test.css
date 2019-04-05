@@ -22,8 +22,8 @@
   
   .circle-bg {
     fill: none;
-    stroke: #eee;
-    stroke-width: 3.8;
+    stroke: rgba(0, 150, 0, 0.500);
+    stroke-width: 2.5;
     
   }
   

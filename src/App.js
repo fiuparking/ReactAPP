@@ -50,7 +50,7 @@ class App extends Component
 
     return (
       <Fragment>
-      <h1><img src="https://parking.fiu.edu/wp-content/uploads/2017/03/parking-sustain-transport-hrz-fiu-color.png" width="25%"></img></h1>
+      <h1><img src="https://parking.fiu.edu/wp-content/uploads/2017/03/parking-sustain-transport-hrz-fiu-color.png" alt="Fiu parking logo" width="25%"></img></h1>
         <div className="App">
         {parkingGarageOuput}
         </div>
