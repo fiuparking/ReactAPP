@@ -4,6 +4,10 @@ h1{
   background-color: #F8C93E;
   padding: 20px;
   margin-bottom: 0px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 h3{
   text-align: center;
@@ -18,6 +22,10 @@ h3{
   margin-left: auto;
   margin-right: auto;
   background: #081E3F;
+  position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
 }
 
 .App-logo {

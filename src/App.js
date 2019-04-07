@@ -92,7 +92,6 @@ class App extends Component
       </h1>
         <div className="App">
         {parkingGarageOuput}
-        <br></br>
         <div style={{color:"white",fontSize:"medium"}}>Fetched at: {this.state.FetchedAt}</div>
         </div>
       </Fragment>
