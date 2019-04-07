@@ -7,7 +7,8 @@ class App extends Component
   {
     super(props);
     this.state= {
-      INPUTHERE: []
+      INPUTHERE: [],
+      FetchedAt: null
     }
   }
 
@@ -37,6 +38,10 @@ class App extends Component
         INPUTHERE: data
       });
       console.log(data);
+      this.setState({
+        FetchedAt: this.state.INPUTHERE[0].asof
+      });
+      console.log(this.state.FetchedAt);
     })
     .catch(
       function() 
@@ -45,6 +50,7 @@ class App extends Component
         console.log("Could not get the data!")
       }
     )
+    console.log("THIS WORKS!?!?!?!");
   }
 
   render() 
@@ -67,6 +73,7 @@ class App extends Component
       return(
         <GarageInfo
         key={Garage.GarageName}
+        fetched={Garage.asof}
         garageName={Garage.GarageName} 
         spotsAvailableForStudents={(Garage.StudentMax - Garage.StudentSpaces)}
         totalStudentParking={Garage.StudentMax}
@@ -80,12 +87,15 @@ class App extends Component
 
     return (
       <Fragment>
-      <h1><img src="https://parking.fiu.edu/wp-content/uploads/2017/03/parking-sustain-transport-hrz-fiu-color.png" alt="Fiu parking logo" width="25%"></img></h1>
+      <h1>
+      <img src="https://parking.fiu.edu/wp-content/uploads/2017/03/parking-sustain-transport-hrz-fiu-color.png" alt="Fiu parking logo" width="25%"></img>
+      </h1>
         <div className="App">
         {parkingGarageOuput}
+        <br></br>
+        <div style={{color:"white",fontSize:"medium"}}>Fetched at: {this.state.FetchedAt}</div>
         </div>
       </Fragment>
-
     );
   }
 }

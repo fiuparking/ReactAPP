@@ -121,8 +121,6 @@ class App extends Component
                         </Row>
                       </TabPane>
                     </TabContent>
-
-
                       </div>
                       </CardBody>
                   </Card>

@@ -4,6 +4,7 @@
     width: 400px;
     margin: 0 auto;
     padding: 10px;
+    padding-bottom: 0px;
 }
 .nav-tabs{
    border-bottom: 1px solid rgba(248, 201, 62, 0.2) !important;
@@ -19,4 +20,7 @@
 }
 h1{
     margin-bottom: 0 !important
+}
+.card-body{
+    padding-bottom: 0px !important;
 }
