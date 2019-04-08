@@ -9,7 +9,13 @@
 ![Dev Dependencies](https://img.shields.io/david/dev/fiuparking/ReactAPP.svg)
 ![Issues](https://img.shields.io/github/issues/fiuparking/ReactAPP.svg)
 
-Hello & welcome. The goal of this project is to enhance the parking services platform that is currently delivered by FIU. This includes the following websites:
+
+This project enhances the parking services platform that is currently delivered by Florida International University (FIU). We were able to achieve this using HTML, CSS, Javascript, and React with the help of ReactStrap. This webApp implements a new User Interface that is more focused on the availability of parking per garage. This information is delivered using a live API which displays the amount of parking spots open and the percentage of taken spots. The webApp can be used for both, students and employees. 
+
+Go to https://go.fiu.edu/liveparking for a live demo
+
+
+Official FIU websites:
 
 https://parking.fiu.edu/patcount/
 
