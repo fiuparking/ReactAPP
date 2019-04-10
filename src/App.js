@@ -70,12 +70,22 @@ class App extends Component
         {
           Garage.OtherSpaces = 0;
         }
+        var spotsAvailable = Garage.StudentMax - Garage.StudentSpaces;
+        if (spotsAvailable < 0)
+        {
+          spotsAvailable = 0;
+        }
+        var percentFull = Garage.StudentFull.substring(0,(Garage.StudentFull.length - 1));
+        if( percentFull > 100)
+        {
+          Garage.StudentFull = "100%";
+        }
       return(
         <GarageInfo
         key={Garage.GarageName}
         fetched={Garage.asof}
         garageName={Garage.GarageName} 
-        spotsAvailableForStudents={(Garage.StudentMax - Garage.StudentSpaces)}
+        spotsAvailableForStudents={(spotsAvailable)}
         totalStudentParking={Garage.StudentMax}
         spotsAvailableForEmployees={Garage.OtherMax - Garage.OtherSpaces}
         totalEmployeeParking={Garage.OtherMax}
