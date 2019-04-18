@@ -12,6 +12,15 @@
 
 This project enhances the parking services platform that is currently delivered by Florida International University (FIU). We were able to achieve this using HTML, CSS, Javascript, and React with the help of ReactStrap. This webApp implements a new User Interface that is more focused on the availability of parking per garage. This information is delivered using a live API which displays the amount of parking spots open and the percentage of taken spots. The webApp can be used for both, students and employees. 
 
+To execute the code:
+1. Download the repo
+2. In terminal, CD in the master folder
+3. Run npm start or yarn start
+Note: you may need to install npm or yarn
+4. Program should successfully launch in your browser 
+
+OR
+
 Go to https://go.fiu.edu/liveparking for a live demo
 
 
