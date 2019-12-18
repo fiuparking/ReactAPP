@@ -1,112 +1,50 @@
 import React, { Component, Fragment } from 'react';
-import './App.css';
-import GarageInfo from './components/GarageInfo';
-class App extends Component 
-{
-  constructor(props)
-  {
-    super(props);
-    this.state= {
-      INPUTHERE: [],
-      FetchedAt: null
-    }
+import { Content, FetchedAt } from './style';
+import Loader from './components/Loader';
+import Header from './components/Header';
+import GarageCard from './components/GarageCard';
+
+export default class App extends Component {
+  state = {
+    data: [],
+    fetchedAt: null,
+    loading: true,
+  };
+
+  componentDidMount() {
+    this.fetchData();
+    this.interval = setInterval(this.fetchData, 300000);
   }
 
-  componentDidMount(){
-    
-    this.getInfo();
-    //runs ever 5 minutes
-    this.interval = setInterval(this.getInfo, 300000)
-  }
-
-  componentWillMount()
-  {
-    // Clear the interval right before component unmount
+  componentWillUnmount() {
     clearInterval(this.interval);
   }
-  
-  getInfo = () => 
-  {
-    //Todo test api later
-  let FIU_API_LINK = "https://m.fiu.edu/feeds//transit/v1/json.php?section=parking";
-    fetch(FIU_API_LINK)
-    .then(results => {
-      return results.json();
-    })
-    .then( data =>{
-      this.setState({
-        INPUTHERE: data
-      });
-      console.log(data);
-      this.setState({
-        FetchedAt: this.state.INPUTHERE[0].asof
-      });
-      console.log(this.state.FetchedAt);
-    })
-    .catch(
-      function() 
-      {
-        // This is where you run code if the server returns any errors
-        console.log("Could not get the data!")
-      }
-    )
-    console.log("THIS WORKS!?!?!?!");
-  }
 
-  render() 
-  {
+  fetchData = () => {
+    fetch('https://m.fiu.edu/feeds//transit/v1/json.php?section=parking')
+      .then((res) => res.json())
+      .then((data) => this.setState({ data, fetchedAt: data[0].asof }))
+      .then(() => this.setState({ loading: false }))
+      .catch((err) => console.log('Issue fetching data ', err.message));
+  };
 
-    //Todo Template, Finish this later
-    const parkingGarageOuput = this.state.INPUTHERE.map( 
-      (Garage) =>
-      {
-        //TODO Unsure if works.
-        //DEAL WITH NEGATIVE PARKING
-        if(Garage.StudentSpaces < 0)
-        {
-          Garage.StudentSpaces = 0;
-        }
-        if(Garage.OtherSpaces < 0)
-        {
-          Garage.OtherSpaces = 0;
-        }
-        var spotsAvailable = Garage.StudentMax - Garage.StudentSpaces;
-        if (spotsAvailable < 0)
-        {
-          spotsAvailable = 0;
-        }
-        var percentFull = Garage.StudentFull.substring(0,(Garage.StudentFull.length - 1));
-        if( percentFull > 100)
-        {
-          Garage.StudentFull = "100%";
-        }
-      return(
-        <GarageInfo
-        key={Garage.GarageName}
-        fetched={Garage.asof}
-        garageName={Garage.GarageName} 
-        spotsAvailableForStudents={(spotsAvailable)}
-        totalStudentParking={Garage.StudentMax}
-        spotsAvailableForEmployees={Garage.OtherMax - Garage.OtherSpaces}
-        totalEmployeeParking={Garage.OtherMax}
-        percentFullStudents={Garage.StudentFull}
-        percentFullEmployees={Garage.OtherFull}
-        />);
-    })
-
-
+  renderParkings(data, fetchedAt) {
     return (
       <Fragment>
-      <h1>
-      <img src="https://parking.fiu.edu/wp-content/uploads/2017/03/parking-sustain-transport-hrz-fiu-color.png" alt="Fiu parking logo" width="25%"></img>
-      </h1>
-        <div className="App">
-        {parkingGarageOuput}
-        <div style={{color:"white",fontSize:"medium"}}>Fetched at: {this.state.FetchedAt}</div>
-        </div>
+        <Header />
+        <Content>
+          {data.map((garage) => (
+            <GarageCard {...garage} key={garage.GarageName} />
+          ))}
+        </Content>
+        <FetchedAt>Fetched at: {fetchedAt}</FetchedAt>
       </Fragment>
     );
   }
-}
 
-export default App;
+  render() {
+    const { loading, data, fetchedAt } = this.state;
+
+    return loading ? <Loader /> : this.renderParkings(data, fetchedAt);
+  }
+}
