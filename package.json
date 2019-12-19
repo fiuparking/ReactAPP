@@ -1,14 +1,12 @@
 {
-  "name": "i",
-  "version": "0.1.0",
+  "name": "fiu-parking",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "http://fiuparking.github.io/ReactAPP",
   "dependencies": {
-    "bootstrap": "^4.3.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.0",
-    "reactstrap": "^7.1.0"
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
