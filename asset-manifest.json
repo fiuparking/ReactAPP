@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/ReactAPP/static/js/main.3fea9c42.js",
-    "static/media/parking-logo.png": "/ReactAPP/static/media/parking-logo.9fa486ee771a088bdd79.png",
-    "index.html": "/ReactAPP/index.html",
-    "main.3fea9c42.js.map": "/ReactAPP/static/js/main.3fea9c42.js.map"
+    "main.js": "/static/js/main.75abb484.js",
+    "static/media/parking-logo.png": "/static/media/parking-logo.9fa486ee771a088bdd79.png",
+    "index.html": "/index.html",
+    "main.75abb484.js.map": "/static/js/main.75abb484.js.map"
   },
   "entrypoints": [
-    "static/js/main.3fea9c42.js"
+    "static/js/main.75abb484.js"
   ]
 }
