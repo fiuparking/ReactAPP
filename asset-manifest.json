@@ -1,15 +1,11 @@
 {
-  "main.css": "/ReactAPP/static/css/main.2b3529bb.chunk.css",
-  "main.js": "/ReactAPP/static/js/main.8ee7d141.chunk.js",
-  "main.js.map": "/ReactAPP/static/js/main.8ee7d141.chunk.js.map",
-  "runtime~main.js": "/ReactAPP/static/js/runtime~main.786e72ef.js",
-  "runtime~main.js.map": "/ReactAPP/static/js/runtime~main.786e72ef.js.map",
-  "static/css/2.87cee5f3.chunk.css": "/ReactAPP/static/css/2.87cee5f3.chunk.css",
-  "static/js/2.88361ba5.chunk.js": "/ReactAPP/static/js/2.88361ba5.chunk.js",
-  "static/js/2.88361ba5.chunk.js.map": "/ReactAPP/static/js/2.88361ba5.chunk.js.map",
-  "index.html": "/ReactAPP/index.html",
-  "precache-manifest.3c6095e679c579ceb49aff9a8c4c37ab.js": "/ReactAPP/precache-manifest.3c6095e679c579ceb49aff9a8c4c37ab.js",
-  "service-worker.js": "/ReactAPP/service-worker.js",
-  "static/css/2.87cee5f3.chunk.css.map": "/ReactAPP/static/css/2.87cee5f3.chunk.css.map",
-  "static/css/main.2b3529bb.chunk.css.map": "/ReactAPP/static/css/main.2b3529bb.chunk.css.map"
+  "files": {
+    "main.js": "/ReactAPP/static/js/main.3fea9c42.js",
+    "static/media/parking-logo.png": "/ReactAPP/static/media/parking-logo.9fa486ee771a088bdd79.png",
+    "index.html": "/ReactAPP/index.html",
+    "main.3fea9c42.js.map": "/ReactAPP/static/js/main.3fea9c42.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3fea9c42.js"
+  ]
 }
