@@ -21,7 +21,13 @@ export default class App extends Component {
   }
 
   fetchData = () => {
-    fetch('https://m.fiu.edu/feeds//transit/v1/json.php?section=parking')
+    const apiKey = "853bb69e-8dd9-4fcd-bc69-b1459db9b84a"; // Replace with your actual key
+
+      fetch('https://psapi.fiu.edu/rest/mobile/v1/parking/garages', {
+        headers: {
+          'X-API-Key': apiKey,
+        },
+      })
       .then((res) => res.json())
       .then((data) => this.setState({ data, fetchedAt: data[0].asof }))
       .then(() => this.setState({ loading: false }))
